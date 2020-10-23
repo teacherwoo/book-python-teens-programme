@@ -1,0 +1,10 @@
+/build/
+.DS_Store
+*.pyc
+*.log
+.idea
+.python-version
+__pycache__/*
+__pycache__
+*.bak
+

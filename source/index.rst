@@ -9,9 +9,5 @@
    :maxdepth: 2
    :glob:
    
-   preface
    chapters/*  
-   series   
-   aboutme
-   copyright
-   roadmap
+   postscript

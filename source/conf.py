@@ -44,7 +44,7 @@ master_doc = u'index'
 
 
 # General information about the project.
-project = u'book-python-teens-programme'
+project = u'青少年编程入门教程'
 
 copyright = u'2020, 鸥集礼德'
 

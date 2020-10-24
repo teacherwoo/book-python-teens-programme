@@ -190,7 +190,7 @@ latex_font_size = u'10pt'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [('index', 'book-python-teens-programme.tex', u'book-python-teens-programme Documentation', u'teacherwoo', 'manual')]
+latex_documents = [('index', 'book-python-teens-programme.tex', u'青少年编程入门教程', u'鸥集礼德', 'manual')]
 
 
 # A dictionary that contains LaTeX snippets that override those Sphinx usually 

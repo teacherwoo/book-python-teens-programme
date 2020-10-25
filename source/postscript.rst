@@ -13,7 +13,7 @@
 
 *关于作者*
 
-.. image:: ./_static/c00/WechartQRCodeSmall.jpg
+.. image:: ./_static/c00/WechartQRCode.png
  
 加微信请扫描上述二维码
 

@@ -1,6 +1,6 @@
-=====================
-Python开发环境准备
-=====================
+========================
+Python的解释器安装与使用
+========================
 
 ------------
 目标
@@ -14,9 +14,9 @@ Python开发环境准备
 下载Python解释器
 -----------------------------
 
-打开解释器的  `[python解释器——下载地址] <https://www.python.org/downloads/release/python-381/>`_ 页面。
+打开解释器的  `[python解释器3.81——https://www.python.org/downloads/release/python-381/] <https://www.python.org/downloads/release/python-381/>`_ 页面。
 
-.. image:: ../_static/c01/c01p06pythondownload.png
+.. image:: ../_static/c01/c01p02_i01_pythondownload.png
 
 查找我们需要的python解释器3.8安装版：Windows x86-64 executable installer 单击即可下载。
 
@@ -26,11 +26,11 @@ Python开发环境准备
 
 双击可执行文件，并勾选添加环境变量，按照客户设置进行安装  ：
 
-.. image:: ../_static/c01/c01p07installpython.png
+.. image:: ../_static/c01/c01p02_i02_installpython.png
 
 下一步，检查默认附加选项是否都被勾选上，按提示操作即可：
 
-.. image:: ../_static/c01/c01p08installpython2.png
+.. image:: ../_static/c01/c01p02_i03_installpython2.png
 
 -------------------------
 检查解释器安装是否成功
@@ -41,7 +41,7 @@ Python开发环境准备
 
 在Python交互式解释器中输 入 ``import this`` ,就会显示Python之禅：
 
-.. image:: ../_static/c01/c01p09zen.png
+.. image:: ../_static/c01/c01p02_i04_zen.png
 
 看到上述现象，说明python解释器安装成功。
 

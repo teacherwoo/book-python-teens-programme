@@ -44,7 +44,7 @@ master_doc = u'index'
 
 
 # General information about the project.
-project = u'青少年编程-入门教程'
+project = u'鸥集礼德-青少年编程'
 
 copyright = u'2020, 鸥集礼德'
 
@@ -100,7 +100,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = u'default'
+html_theme = u'alabaster'
 
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -190,7 +190,7 @@ latex_font_size = u'10pt'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [('index', 'book-python-teens-programme.tex', u'青少年编程-入门教程', u'鸥集礼德', 'manual')]
+latex_documents = [('index', 'book-python-teens-programme.tex', u'鸥集礼德-青少年编程', u'鸥集礼德', 'manual')]
 
 
 # A dictionary that contains LaTeX snippets that override those Sphinx usually 
@@ -226,7 +226,7 @@ latex_use_parts = False
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [('index', 'book-python-teens-programme', u'青少年编程-入门教程', [u'鸥集礼德'], 1)]
+man_pages = [('index', 'book-python-teens-programme', u'鸥集礼德-青少年编程', [u'鸥集礼德'], 1)]
 
 
 # -- Additional options --------------------------------------------------------

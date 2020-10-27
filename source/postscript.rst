@@ -14,6 +14,7 @@
 *关于作者*
 
 .. image:: ./_static/c00/WechartQRCode.png
+   :width: 300 
  
 加微信请扫描上述二维码
 

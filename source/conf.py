@@ -232,3 +232,15 @@ man_pages = [('index', 'book-python-teens-programme', u'鸥集礼德-青少年�
 # -- Additional options --------------------------------------------------------
 
 todo_include_todos = True
+
+
+# -- Additional PDF options --------------------------------------------------------
+
+# Language to be used for hyphenation support
+pdf_language = "zh_CN"
+  
+# Mode for literal blocks wider than the frame. Can be
+# overflow, shrink or truncate
+pdf_fit_mode = "shrink"
+
+

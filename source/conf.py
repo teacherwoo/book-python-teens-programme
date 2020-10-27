@@ -236,6 +236,10 @@ todo_include_todos = True
 
 # -- Additional PDF options --------------------------------------------------------
 
+pdf_documents = [
+  ('index', u'O记', u'HanLP Handbook', u'hankcs'),
+]
+
 # Language to be used for hyphenation support
 pdf_language = "zh_CN"
   

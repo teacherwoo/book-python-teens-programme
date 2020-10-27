@@ -17,11 +17,11 @@
 
 图像由像素组成，这些像素有3个部分：红色，绿色和蓝色。每个部分点亮多少会决定像素的颜色，如下所示：
 
-.. image:: ../_static/c03/c03p02_i01_rgbcolor.png
+.. image:: ../_static/c04/c04p02_i01_rgbcolor.png
 
 三原色中的每一个可以具有介于0和255之间的值，因此对于三种基色中的每一种，存在256种不同的可能性。以下是一些三种颜色的组合示例：
 
-.. image:: ../_static/c03/c03p02_i02_rgbcolor2.png
+.. image:: ../_static/c04/c04p02_i02_rgbcolor2.png
 
 
 
@@ -78,8 +78,12 @@
 
 运行的效果是：
 
-.. image:: ../_static/c03/c03p02_i03_setbackcolor.png
+.. image:: ../_static/c04/c04p02_i03_setbackcolor.png
 
+
+------------
+思考与练习
+------------
 
 ------------
 你学到了什么

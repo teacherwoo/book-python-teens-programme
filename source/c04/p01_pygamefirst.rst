@@ -25,7 +25,7 @@ Pygame是一个“游戏开发库” - 一组帮助程序员制作游戏的代�
 
 Pygame已经存在很多时间了，许多优秀的程序员加入其中，把Pygame做得越来越好。
 
-.. image:: ../_static/c03/c03p01_i01_pygamelogo.png
+.. image:: ../_static/c04/c04p01_i01_pygamelogo.png
 
 你可以从www.pygame.org下载Pygame，选择合适你的操作系统和合适的版本，然后安装就可以了。
 
@@ -57,14 +57,18 @@ screen指的是游戏屏幕。
 
 运行效果是：
 
-.. image:: ../_static/c03/c03p01_i02_pygamestart.png
+.. image:: ../_static/c04/c04p01_i02_pygamestart.png
 
 **如何停止pygame程序**
 
 正确的设置停止pygame程序将在后面详细讲解。
 现在阶段还不能正常停止pygame程序窗口，只能点击集成开发环境Thonny的关闭按钮来关闭程序：
 
-.. image:: ../_static/c03/c03p01_i03_pygameclose.png
+.. image:: ../_static/c04/c04p01_i03_pygameclose.png
+
+------------
+思考与练习
+------------
 
 ------------
 你学到了什么

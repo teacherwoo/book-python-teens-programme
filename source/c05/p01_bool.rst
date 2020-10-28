@@ -86,6 +86,56 @@ bool仅包含真(True)/假(False)两个值，0为False，非0为True。在逻辑
 
     双等号问题，在编程的世界里，单一等号一般表示赋值，双等号一般表示比较操作，获取逻辑结果。
 
+--------------------------------------------------
+字符串，列表，元组，字典判断成员存在性
+--------------------------------------------------
+ 
+**in**
+
+判断指定数据在某个列表序列，如果在返回True，否则返回False
+
+.. code-block:: python
+
+   name_list = ['Tom', 'Lily', 'Rose']
+   
+   # 结果：True
+   print('Lily' in name_list)
+   
+   # 结果：False
+   print('Lilys' in name_list)
+
+
+**not in**
+
+判断指定数据不在某个列表序列，如果不在返回True，否则返回False
+
+.. code-block:: python
+
+   name_list = ['Tom', 'Lily', 'Rose']
+   
+   # 结果：False
+   print('Lily' not in name_list)
+   
+   # 结果：True
+   print('Lilys' not in name_list)
+
+
+**案例**
+
+需求：查找用户输入的名字是否已经存在。
+
+.. code-block:: python
+
+   name_list = ['Tom', 'Lily', 'Rose']
+   
+   name = input('请输入您要搜索的名字：')
+   
+   if name in name_list:
+       print(f'您输入的名字是{name}, 名字已经存在')
+   else:
+       print(f'您输入的名字是{name}, 名字不存在')
+
+
 ----------------
 bool值的运算
 ----------------
@@ -109,6 +159,8 @@ not           not x                 布尔"非"：如果 x 为 True，返回 Fal
    print((a > b) and (b < c))  # False
    print((a > b) or (b < c))   # True
    print(not (a > b))          # True
+
+
 
 
 ------------

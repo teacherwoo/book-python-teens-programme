@@ -7,9 +7,8 @@
 ------------
 
 - 认识字符串
-- 下标
-- 切片
-- 常用操作方法
+- 学习下标操作
+- 了解切片
 
 ------------------
 认识字符串
@@ -26,10 +25,9 @@
 
 
 注意:控制台显示结果为 ``<class 'str'>`` ， 即数据类型为str(字符串)。
+创建一个字符串可以用单引号，双引号，也可以用一对三个单引号或者双引号创建一个字符串，这种字符串支撑换行。
 
-**字符串特征**
-
-*一对引号字符串*
+一对引号字创建的符串：
 
 .. code-block:: python
 
@@ -37,7 +35,7 @@
    name2 = "Rose"
 
 
-*三引号字符串*
+用三个引号创建的字符串：
 
 .. code-block:: python
 
@@ -49,9 +47,6 @@
    b = """ i am Rose, 
            nice to meet you! """
 
-
-注意：三引号形式的字符串支持换行。
-
 思考：如果创建一个字符串 ``I'm Tom`` ?
 
 .. code-block:: python
@@ -59,8 +54,13 @@
    c = "I'm Tom"
    d = 'I\'m Tom'
 
+这里使用了反斜杠，反斜杠加字符的形式叫做``转义字符``，转义字符的目的是表达一些无法用字符表达的含义。
 
-**字符串输出**
+------------------
+字符串的输入输出
+------------------
+
+字符串输出的方法，之前介绍过，使用print函数，向控制台终端，打印出你想看到的字符串：
 
 .. code-block:: python
 
@@ -69,115 +69,50 @@
    print('我的名字是%s' % name)
    print(f'我的名字是{name}')
 
-
-
-
-**字符串输入**
-
-在Python中，使用`input()`接收用户输入。
-
- 
+那么字符串输入如何实现呢？
+在Python中，使用``input()``函数，来接收用户的输入： 
 
 .. code-block:: python
 
-   name = input('请输入您的名字：')
-   print(f'您输入的名字是{name}')
-   print(type(name))
-   
-   password = input('请输入您的密码：')
-   print(f'您输入的密码是{password}')
-   print(type(password))
-
-
- 
+   >>> name=input('请输入名字：\n')
+   请输入名字：
+   woo
+   >>> name
+   'woo'
 
 -------------
 下标
 -------------
 
 “下标”又叫“索引”，就是编号。比如火车座位号，座位号的作用：按照编号快速找到对应的座位。
+这个下表或者索引，类似数学数列中的编号。下标的作用即是，当我们使用字符串时，通过下标快速找到对应的数据。
 
-同理，下标的作用即是通过下标快速找到对应的数据。
-
-**快速体验**
-
-需求：字符串`name = "abcdef"`，取到不同下标对应的数据。
-
+比如，有一个字符串``name = "abcdef"``，我们如何快速的取到name这个字符串里面，不同位置对应的字符串呢?
 
 .. code-block:: python
 
-   name = "abcdef"
-   
+   name = "abcdef"   
    print(name[1])
    print(name[0])
    print(name[2])
  
-注意：下标从==0==开始。
+注意：下标从``0``开始。
 
  
-
---------------
-切片
---------------
-
-切片是指对操作的对象截取其中一部分的操作。**字符串、列表、元组**都支持切片操作。
-
-**语法**
-
-.. code-block:: python
-
-   序列[开始位置下标:结束位置下标:步长]
-
-
-注意：
-
-   - 1. 不包含结束位置下标对应的数据， 正负整数均可；
-   - 2. 步长是选取间隔，正负整数均可，默认步长为1。
-
-**体验**
-
-.. code-block:: python
-
-   name = "abcdefg"
-   
-   print(name[2:5:1])  # cde
-   print(name[2:5])  # cde
-   print(name[:5])  # abcde
-   print(name[1:])  # bcdefg
-   print(name[:])  # abcdefg
-   print(name[::2])  # aceg
-   print(name[:-1])  # abcdef, 负1表示倒数第一个数据
-   print(name[-4:-1])  # def
-   print(name[::-1])  # gfedcba
-
-
-
-字符串的常用操作方法有查找、修改和判断三大类。
- 
-
 ----------------------
-常用操作:修改
+字符串的修改
 ----------------------
  
+**字符串替换**
 
 所谓修改字符串，指的就是通过函数的形式修改字符串中的数据。
-
-**replace()**
-
-替换
-
-*语法*
+我们使用``replace()``函数，来实现对字符串的替换：
 
 .. code-block:: python
 
-   字符串序列.replace(旧子串, 新子串, 替换次数)
+   字符串序列.replace(旧子串, 新子串)
 
-
-*注意*
-
-替换次数如果查出子串出现次数，则替换次数为该子串出现次数。
-
-*快速体验*
+我们看一下例子：
 
 .. code-block:: python
 
@@ -189,65 +124,7 @@
    print(mystr.replace('and', 'he', 10))
    # 结果：hello world and itcast and itheima and Python
    print(mystr)
-
-
-*注意*
-
-数据按照是否能直接修改分为==可变类型==和==不可变类型==两种。字符串类型的数据修改的时候不能改变原有字符串，属于不能直接修改数据的类型即是不可变类型。
-
-
-**split()**
-
-按照指定字符分割字符串。
-
-*语法*
-
-``字符串序列.split(分割字符, num)``
-
-
-*注意*
-
-   num表示的是分割字符出现的次数，即将来返回数据个数为num+1个。
-
-*快速体验*
-
-.. code-block:: python
-
-   mystr = "hello world and itcast and itheima and Python"
-   
-   # 结果：['hello world ', ' itcast ', ' itheima ', ' Python']
-   print(mystr.split('and'))
-   # 结果：['hello world ', ' itcast ', ' itheima and Python']
-   print(mystr.split('and', 2))
-   # 结果：['hello', 'world', 'and', 'itcast', 'and', 'itheima', 'and', 'Python']
-   print(mystr.split(' '))
-   # 结果：['hello', 'world', 'and itcast and itheima and Python']
-   print(mystr.split(' ', 2))
-
-
-*注意*
-
-   如果分割字符是原有字符串中的子串，分割后则丢失该子串。
-
-**join()**
-
-用一个字符或子串合并字符串，即是将多个字符串合并为一个新的字符串。
-
-*语法*
-
-``字符或子串.join(多字符串组成的序列)``
-
-
-*快速体验*
-
-.. code-block:: python
-
-   list1 = ['chuan', 'zhi', 'bo', 'ke']
-   t1 = ('aa', 'b', 'cc', 'ddd')
-   # 结果：chuan_zhi_bo_ke
-   print('_'.join(list1))
-   # 结果：aa...b...cc...ddd
-   print('...'.join(t1))
+ 
 
 
 

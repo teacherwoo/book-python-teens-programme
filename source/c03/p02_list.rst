@@ -6,71 +6,100 @@
 目标
 -------------
 
-- 列表的应用场景
+- 学习使用列表
 - 列表的格式
 - 列表的常用操作
 - 列表的循环遍历
 - 列表的嵌套使用
 
--------------------
-列表的应用场景
--------------------
+------------------------------
+什么是python的列表（list）
+------------------------------
 
-思考：有一个人的姓名(TOM)怎么书写存储程序？
+先思考一个问题，有一个人的姓名(TOM)，在程序内如何储存？
 
-答：变量。
+答：使用变量进行储存。
 
 思考：如果一个班级100位学生，每个人的姓名都要存储，应该如何书写程序？声明100个变量吗？
 
-答：列表即可， 列表一次性可以存储多个数据。
+答：列表即可， 一个列表变量，可以一次性存储多个数据。
 
---------------------
-列表的格式
---------------------
+那么列表是怎样储存数据的呢？列表储存数据的方式是：
 
 ``[数据1, 数据2, 数据3, 数据4......]``
 
-列表可以一次性存储多个数据，且可以为不同数据类型。
-
-列表的作用是一次性存储多个数据，程序员可以对这些数据进行的操作有：增、删、改、查。
-
-------------------------
-列表的查找：下标方式
-------------------------
+列表可以一次性存储多个数据，且可以为不同数据类型。我们可以对这些数据进行的操作有：增、删、改、查。
 
 
-**下标方式**
+------------------------------
+列表的创建
+------------------------------
+
+我们用一对中括号``[]``来创建一个python列表。
+零个，一个或一系列数据用逗号隔开，放在方括号[ ]内就是一个列表对象。具体做法是，只要把逗号分隔的不同的数据项使用方括号括起来即可。
 
 .. code-block:: python
 
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   print(name_list[0])  # Tom
-   print(name_list[1])  # Lily
-   print(name_list[2])  # Rose
+   list1 = ['苹果', '梨', '香蕉', '菠萝']
+   list2 = [1, 2, 3, 4, 5 ]
+   list3 = ["a", "b", "c", "d"]
+
+
 
 ------------------------
-列表的查找：函数方式
+访问列表中的值
+------------------------
+
+
+与字符串的索引一样，列表索引从 0 开始，第二个索引是 1，依此类推。
+
+通过索引列表可以进行截取、组合等操作。
+
+.. image:: ../_static/c03/c03p02_i01_listindex.png
+
+.. code-block:: python
+
+   list = ['red', 'green', 'blue', 'yellow', 'white', 'black']
+   print( list[0] )
+   print( list[1] )
+   print( list[2] )
+
+以上的输出结果是：
+
+.. code-block:: console
+
+   red
+   green
+   blue
+
+索引也可以从尾部开始，最后一个元素的索引为 -1，往前一位为 -2，以此类推。
+
+.. image:: ../_static/c03/c03p02_i02_listindexnegative.png
+
+反向访问的代码是：
+
+.. code-block:: python
+
+   list = ['red', 'green', 'blue', 'yellow', 'white', 'black']
+   print( list[-1] )
+   print( list[-2] )
+   print( list[-3] )
+
+以上实例输出结果：
+
+.. code-block:: console
+
+   black
+   white
+   yellow
+
+
+
+------------------------
+列表的常用函数
 ------------------------
  
-
-**index()**
-
-返回指定数据所在位置的下标 。
-
-1. 语法
-
-``列表序列.index(数据, 开始位置下标, 结束位置下标)``
-
-2. 快速体验
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']   
-   print(name_list.index('Lily', 0, 2))  # 1
-
-
-注意：如果查找的数据不存在则报错。
+ 
 
 **count()**
 
@@ -92,54 +121,6 @@
    print(len(name_list))  # 3
 
 
----------------------------------
-列表操作：判断成员存在
----------------------------------
- 
-**in**
-
-判断指定数据在某个列表序列，如果在返回True，否则返回False
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   # 结果：True
-   print('Lily' in name_list)
-   
-   # 结果：False
-   print('Lilys' in name_list)
-
-
-**not in**
-
-判断指定数据不在某个列表序列，如果不在返回True，否则返回False
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   # 结果：False
-   print('Lily' not in name_list)
-   
-   # 结果：True
-   print('Lilys' not in name_list)
-
-
-**案例**
-
-需求：查找用户输入的名字是否已经存在。
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   name = input('请输入您要搜索的名字：')
-   
-   if name in name_list:
-       print(f'您输入的名字是{name}, 名字已经存在')
-   else:
-       print(f'您输入的名字是{name}, 名字不存在')
 
 
 
@@ -233,21 +214,6 @@
 列表操作：删除元素
 ---------------------------------
  
-**del**
-
-语法： ``del 目标``
-
-*删除列表*
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   # 结果：报错提示：name 'name_list' is not defined
-   del name_list
-   print(name_list)
-
-
 *删除指定数据*
 
 .. code-block:: python
@@ -259,59 +225,9 @@
    # 结果：['Lily', 'Rose']
    print(name_list)
 
+**清空列表**
 
-
-
-**pop()**
-
-删除指定下标的数据(默认为最后一个)，并返回该数据。
-
-语法
-
-``列表序列.pop(下标)``
-
-*快速体验*
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   del_name = name_list.pop(1)
-   
-   # 结果：Lily
-   print(del_name)
-   
-   # 结果：['Tom', 'Rose']
-   print(name_list)
-
-
-
-
-**remove()**
-
-移除列表中某个数据的第一个匹配项。
-
-*语法*
-
-``列表序列.remove(数据)``
-
-*快速体验*
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   name_list.remove('Rose')
-   
-   # 结果：['Tom', 'Lily']
-   print(name_list)
-
-
-
-
-**clear()**
-
-清空列表
+我们用函数clear()来清空一个列表：
 
 .. code-block:: python
 
@@ -322,7 +238,7 @@
 
 
 ---------------------------------
-列表的常用操作：修改
+列表的常用操作
 ---------------------------------
  
 
@@ -337,15 +253,7 @@
    print(name_list)
 
 
-**逆置：reverse()**
-
-.. code-block:: python
-
-   num_list = [1, 5, 2, 3, 6, 8]   
-   num_list.reverse()
-   
-   # 结果：[8, 6, 3, 2, 5, 1]
-   print(num_list)
+ 
 
 
 **排序：sort()**
@@ -369,52 +277,9 @@
 
 
 
----------------------------------
-列表的常用操作：复制
----------------------------------
- 
-
-**函数：copy()**
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']   
-   name_li2 = name_list.copy()
-   
-   # 结果：['Tom', 'Lily', 'Rose']
-   print(name_li2)
 
 
 
-
---------------------
-列表的循环遍历
---------------------
-
-需求：依次打印列表中的各个数据。
-
-**while**
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   i = 0
-   while i < len(name_list):
-       print(name_list[i])
-       i += 1
-
-
- 
-
-**for**
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   for i in name_list:
-       print(i)
 
 
 --------------------
@@ -439,6 +304,62 @@
    
    # 第二步：从李四所在的列表里面，再按下标找到数据李四
    print(name_list[2][1])
+
+-----------------------------
+跟字符串相关的列表操作
+-----------------------------
+
+
+**字符串的切割**
+
+我们可以使用``split()``函数，来实现按照指定字符分割字符串。
+
+``字符串序列.split(分割字符, num)``
+
+下面来看一下实例：
+
+.. code-block:: python
+
+   mystr = "hello world and itcast and itheima and Python"   
+   
+   print(mystr.split('and'))
+   # 结果：['hello world ', ' itcast ', ' itheima ', ' Python']
+   
+   print(mystr.split(' '))
+   # 结果：['hello', 'world', 'and', 'itcast', 'and', 'itheima', 'and', 'Python']
+ 
+
+根据上面的例子我们可以看到，如果分割字符是原有字符串中的子串，分割后则丢失该子串。
+
+**join()**
+
+用一个字符或子串合并字符串，即是将多个字符串合并为一个新的字符串。
+
+*语法*
+
+``字符或子串.join(多字符串组成的序列)``
+
+
+*快速体验*
+
+.. code-block:: python
+
+   list1 = ['chuan', 'zhi', 'bo', 'ke']
+   t1 = ('aa', 'b', 'cc', 'ddd')
+   # 结果：chuan_zhi_bo_ke
+   print('_'.join(list1))
+   # 结果：aa...b...cc...ddd
+   print('...'.join(t1))
+
+
+
+
+
+
+
+
+
+
 
 
 ----------------------------

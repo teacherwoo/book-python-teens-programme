@@ -36,7 +36,35 @@
 在Python中，循环分为`while`和`for`两种，最终实现效果相同。
 
 
+--------------------
+列表的循环遍历
+--------------------
 
+需求：依次打印列表中的各个数据。
+
+**while**
+
+.. code-block:: python
+
+   name_list = ['Tom', 'Lily', 'Rose']
+   
+   i = 0
+   while i < len(name_list):
+       print(name_list[i])
+       i += 1
+
+
+ 
+
+**for**
+
+.. code-block:: python
+
+   name_list = ['Tom', 'Lily', 'Rose']
+   
+   for i in name_list:
+       print(i)
+       
 --------------
 while的语法
 --------------

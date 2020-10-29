@@ -60,9 +60,9 @@
 .. code-block:: python
 
    list = ['red', 'green', 'blue', 'yellow', 'white', 'black']
-   print( list[0] )
-   print( list[1] )
-   print( list[2] )
+   print(list[0])
+   print(list[1])
+   print(list[2])
 
 以上的输出结果是：
 
@@ -81,9 +81,9 @@
 .. code-block:: python
 
    list = ['red', 'green', 'blue', 'yellow', 'white', 'black']
-   print( list[-1] )
-   print( list[-2] )
-   print( list[-3] )
+   print(list[-1])
+   print(list[-2])
+   print(list[-3])
 
 以上实例输出结果：
 

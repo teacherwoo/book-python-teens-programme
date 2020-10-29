@@ -12,7 +12,7 @@
 - break和continue
 - while循环嵌套【重点】
 - while循环嵌套应用【难点】
-- for循环
+ 
 
 --------------
 循环简介
@@ -331,94 +331,8 @@ while循环嵌套应用
        print()
        j += 1
  
-
----------------
-for循环
----------------
-
-**语法**
-
-.. code-block:: python
-
-   for 临时变量 in 序列:
-      #重复执行的代码1
-      #重复执行的代码2
-      #......
- 
-
-**快速体验**
-
-.. code-block:: python
-
-   str1 = 'itheima'
-   for i in str1:
-      print(i)
-
-
- 
-**break**
-
-.. code-block:: python
-
-   str1 = 'itheima'
-   for i in str1:
-       if i == 'e':
-           print('遇到e不打印')
-           break
-       print(i)
  
  
-**continue**
-
-.. code-block:: python
-
-   str1 = 'itheima'
-   for i in str1:
-       if i == 'e':
-           print('遇到e不打印')
-           continue
-       print(i)
- 
- 
-循环可以和else配合使用，else下方缩进的代码指的是==当循环正常结束之后要执行的代码==。
-
-----------------
-while...else
-----------------
-
-需求：女朋友生气了，要惩罚：连续说5遍“媳妇儿，我错了”，如果道歉正常完毕女朋友就原谅我了，这个程序怎么写？
-
-.. code-block:: python
-
-   i = 1
-   while i <= 5:
-       print('媳妇儿，我错了')
-       i += 1
-   print('媳妇儿原谅我了...')
- 
-
-思考： 这个print是不是没有循环也能执行？
-
-**语法**
-
-.. code-block:: python
-
-   while 条件:
-      #条件成立重复执行的代码
-   else:
-      #循环正常结束之后要执行的代码
- 
-
-**示例**
-
-.. code-block:: python
-
-   i = 1
-   while i <= 5:
-       print('媳妇儿，我错了')
-       i += 1
-   else:
-       print('媳妇原谅我了，真开心，哈哈哈哈')
 
 **退出循环的方式**
 

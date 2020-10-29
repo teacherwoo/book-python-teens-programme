@@ -31,10 +31,15 @@ Pygame已经存在很多时间了，许多优秀的程序员加入其中，把Py
 
 当然，推荐大家用pip的方式安装pygame，输入 pip install pygame命令：
 
-
 .. code-block:: console
 
    pip install pygame
+   
+通过上述命令，pygame模块就会被安装在当前的python解释器环境内。可以通过``pip list`` 命令进行查看,这个命令是列出已安装的包。
+
+.. note::
+   
+   pip 是 Python 包管理工具，该工具提供了对Python 包的查找、下载、安装、卸载的功能。目前如果你在 python.org 下载最新版本的安装包，则是已经自带了该工具。 Python 3.4+ 以上版本都自带 pip 工具。
 
 -----------------
 使用pygame
@@ -65,6 +70,8 @@ screen指的是游戏屏幕。
 现在阶段还不能正常停止pygame程序窗口，只能点击集成开发环境Thonny的关闭按钮来关闭程序：
 
 .. image:: ../_static/c04/c04p01_i03_pygameclose.png
+
+正确停止pygame的方式，到后续章节会展开详细说明。
 
 ------------
 思考与练习

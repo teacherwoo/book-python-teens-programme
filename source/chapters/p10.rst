@@ -4,7 +4,7 @@
 
 本章通过开发一个实例项目，对前几章介绍的基础编程知识进行一个综合运用，并结束python初级阶段的教学。
  
-Contents:
+.. image:: ../_static/book/step_light.png
 
 .. toctree::
    :maxdepth: 1

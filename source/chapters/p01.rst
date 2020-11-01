@@ -4,6 +4,8 @@
 
 本章是给没接触过计算机编程的同学，概括介绍计算机编程，将同学们引入编程的世界。
 
+.. image:: ../_static/book/step_light.png
+
 .. toctree::
    :maxdepth: 1
    :glob:

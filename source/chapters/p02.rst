@@ -5,6 +5,7 @@
 通过上一章的学习，python的解释器和python的集成开发环境thonny已经安装完成了。我们已准备好做点什么了。
 本章我们将从计算开始学习，然后再使用变量。
 
+.. image:: ../_static/book/step_light.png
 
 .. toctree::
    :maxdepth: 1

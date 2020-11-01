@@ -4,7 +4,7 @@
 
 本章介绍pygame的正常编程过程。
  
-Contents:
+.. image:: ../_static/book/step_light.png
 
 .. toctree::
    :maxdepth: 1

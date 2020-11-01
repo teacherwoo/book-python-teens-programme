@@ -4,6 +4,8 @@
 
 本章介绍python语言的常用数据序列与数据解构，字符串，列表，元祖，字典。
 
+.. image:: ../_static/book/step_light.png
+
 .. toctree::
    :maxdepth: 1
    :glob:

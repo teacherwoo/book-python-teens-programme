@@ -115,6 +115,6 @@ Python的解释器安装与使用
 - 解释器环境如何安装
 - python之禅和python语言特点
  
-
+.. image:: ../_static/c01/c01p02_i05_end.jpg
    
  

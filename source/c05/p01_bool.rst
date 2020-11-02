@@ -194,7 +194,7 @@ not           not x                 布尔"非"：如果 x 为 True，返回 Fal
 
 
 
-
+.. image:: ../_static/c05/c05p01_i01_end.png
 
 
 

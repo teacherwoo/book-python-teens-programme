@@ -12,3 +12,5 @@
    :glob:
 
    ../c02/*
+   
+.. image:: ../_static/book/python_marks.png

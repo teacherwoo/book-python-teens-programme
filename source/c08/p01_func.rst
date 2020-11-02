@@ -75,10 +75,6 @@
 
    add(2, 3)
 
-这样，就完成了一个相对较完整的加和函数:
-
-.. image:: ../_static/c09/c09p01_i01_addfunc.png
-
 函数体内的变量，只有在函数被调用的时候才被创建出来，函数体执行结束后就不能再用了。
 在我们编程领域，称这种变量被创造和激活使用的范围，称为变量的“作用域”。
 比如，我们要在上述函数执行完毕后再次获取a的值，比如``print(a)`` ，则程序会报错：
@@ -111,14 +107,16 @@
 
 .. code-block:: python
 
-   def sum_num(a, b):
-       return a + b
-   
+   def add(a, b):
+       return a + b   
    
    # 用result变量保存函数返回值
-   result = sum_num(1, 2)
+   result = add(2,3)
    print(result)
 
+这样，就完成了一个相对较完整的加和函数:
+
+.. image:: ../_static/c09/c09p01_i01_addfunc.png
  
 ----------------------
 函数的知识点总结

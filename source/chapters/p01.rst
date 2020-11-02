@@ -11,3 +11,5 @@
    :glob:
 
    ../c01/*
+   
+.. image:: ../_static/book/python_marks.png

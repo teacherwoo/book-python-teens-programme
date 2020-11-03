@@ -116,7 +116,7 @@
 
 这样，就完成了一个相对较完整的加和函数:
 
-.. image:: ../_static/c09/c09p01_i01_addfunc.png
+.. image:: ../_static/c08/c08p01_i01_addfunc.png
  
 ----------------------
 函数的知识点总结
@@ -129,7 +129,7 @@
 - 函数内容以冒号起始，并且缩进。
 - return [表达式] 结束函数，选择性地返回一个值给调用方。不带表达式的return相当于返回 None。
  
-.. image:: ../_static/c09/c09p01_i02_deffunc.png
+.. image:: ../_static/c08/c08p01_i02_deffunc.png
 
 --------------
 函数应用

@@ -14,23 +14,16 @@
 元组的应用场景
 ---------------------
 
-思考：如果想要存储多个数据，但是这些数据是不能修改的数据，怎么做？
+什么是元组，元组就好像是使用圆括号的列表。
 
-答：列表？列表可以一次性存储多个数据，但是列表中的数据允许更改。
+元组和列表的区别是，元组一旦创建，就不能再做任何的改动了。
 
-.. code-block:: python
-
-   num_list = [10, 20, 30]
-   num_list[0] = 100
-
-
-一个元组可以存储多个数据，元组内的数据是不能修改的。
 
 -----------
 定义元组
 -----------
 
-元组特点：定义元组使用==小括号==，且==逗号==隔开各个数据，数据可以是不同的数据类型。
+元组特点：定义元组使用``小括号`` ，且``逗号`` 隔开各个数据，数据可以是不同的数据类型。
 
 .. code-block:: python
 
@@ -70,16 +63,7 @@
    tuple1 = ('aa', 'bb', 'cc', 'bb')
    print(tuple1[0])  # aa
 
-
-**index()**
-
-查找某个数据，如果数据存在返回对应的下标，否则报错，语法和列表、字符串的index方法相同。
-
-.. code-block:: python
-
-   tuple1 = ('aa', 'bb', 'cc', 'bb')
-   print(tuple1.index('aa'))  # 0
-
+ 
 
 **count()**
 
@@ -89,8 +73,6 @@
 
    tuple1 = ('aa', 'bb', 'cc', 'bb')
    print(tuple1.count('bb'))  # 2
-
-
 
 
 **len()**
@@ -103,46 +85,19 @@
    print(len(tuple1))  # 4
 
 
-> 注意：元组内的直接数据如果修改则立即报错
+注意：元组内的直接数据如果修改则立即报错:
 
 .. code-block:: python
 
    tuple1 = ('aa', 'bb', 'cc', 'bb')
    tuple1[0] = 'aaa'
 
+.. code-block:: console
 
-但是如果元组里面有列表，修改列表里面的数据则是支持的，故自觉很重要。
-
-.. code-block:: python
-
-   tuple2 = (10, 20, ['aa', 'bb', 'cc'], 50, 30)
-   print(tuple2[2])  # 访问到列表
-   
-   # 结果：(10, 20, ['aaaaa', 'bb', 'cc'], 50, 30)
-   tuple2[2][0] = 'aaaaa'
-   print(tuple2)
+   TypeError: 'tuple' object does not support item assignment
 
 
-
-
----------
-总结
----------
-
-- 定义元组
-
-.. code-block:: python
-
-   t1 = (10, 20, 30)
-   t2 = (10,)
-
-
-- 常用操作方法
-
-  - index()
-  - len()
-
-
+ 
 
 
 

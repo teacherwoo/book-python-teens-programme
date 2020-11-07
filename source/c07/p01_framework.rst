@@ -2,6 +2,22 @@
 pygame机制
 ===============================
 
+
+
+
+我们如何使得现在的pygame程序不报错呢？
+我们可以在现有的pygame代码上加入下面的一段代码，则pygame窗口就不会报错了：
+
+.. code-block:: python
+
+   while True:
+       for event in pygame.event.get():
+           if event.type == pygame.QUIT:
+               sys.exit()
+
+这是一个循环，是说我循环监听pygame.event.get()函数获取到的pygame窗口得到的事件，如果是一个QUIT事件，则退出，否则继续监听。
+这就是一个死循环。可以解决我们的问题，那么这是为什么呢？让我们来一起看一下pygame的基本的框架。
+
 -------------------------
 Pygame游戏结构框架
 -------------------------

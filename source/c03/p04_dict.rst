@@ -2,13 +2,8 @@
 字典:dict 
 =====================
 
-
-
-------------------
-什么是字典
-------------------
-
-python中的字典是dict，是单词dictionary的缩写。是Python 提供的一种常用的数据结构，它用于存放具有映射关系的数据。
+python中的字典是dict，是单词dictionary的缩写。
+是Python 提供的一种常用的数据结构，它用于存放具有映射关系的数据。
 
 比如有份成绩表数据，语文：79，数学：80，英语：92，这组数据看上去像两个列表，但这两个列表的元素之间有一定的关联关系。
 如果单纯使用两个列表来保存这组数据，则无法记录两组数据之间的关联关系。
@@ -51,17 +46,49 @@ python中的字典是dict，是单词dictionary的缩写。是Python 提供的�
    dict2 = {(20, 30):'good', 30:'bad'}
    print(dict2)  
  
-注意：一般称冒号前面的为键(key)，简称k；冒号后面的为值(value)，简称v。
-需要指出的是，元组可以作为 dict 的 key，但列表不能作为元组的 key。这是由于 dict 要求 key 必须是不可变类型，但列表是可变类型，因此列表不能作为元组的 key。
+注意：一般称冒号前面的为键(key)；冒号后面的为值(value)。
+需要指出的是，元组可以作为 dict 的 key，但列表不能作为元组的 key。
+这是由于 dict 要求 key 必须是不可变类型，但列表是可变类型，因此列表不能作为元组的 key。
+
+----------------------
+查询dict里面的值
+----------------------
+
+**用方括号获取**
+
+利用key值查找dict里面的元素值的方式：
+
+.. code-block:: python
+
+   dict1 = {'name': 'Tom', 'age': 20, 'gender': '男'}
+   print(dict1['name'])  # Tom
+   print(dict1['id'])  # 报错
+
+如果当前查找的key存在，则返回对应的值；否则则报错。
+
+
+
+*用get()函数的方法获取*
+
+用get函数获取dict里面的值的的方法是: ``字典.get(key)``
+
+注意：如果当前查找的key不存在则返回None。
+
+.. code-block:: python
+
+   dict1 = {'name': 'Tom', 'age': 20, 'gender': '男'}
+   print(dict1.get('name'))  # Tom
+   print(dict1.get('id', 110))  # 110
+   print(dict1.get('id'))  # None
 
 
 ----------------
 字典常见操作
 ----------------
 
-**增**
+**增加元素**
 
-写法： ``字典序列[key] = 值``
+向dict里面增加元素的写法是： ``字典[key] = 值``
 
 注意：如果key存在则修改这个key对应的值；如果key不存在则新增此键值对。
  
@@ -84,11 +111,9 @@ python中的字典是dict，是单词dictionary的缩写。是Python 提供的�
 
 
 
-**删**
+**删除元素**
 
-*del() / del*
-
-删除字典或删除字典中指定键值对。
+用del命令删除字典或删除字典中指定键值对：
 
 .. code-block:: python
 
@@ -99,85 +124,22 @@ python中的字典是dict，是单词dictionary的缩写。是Python 提供的�
    print(dict1)
 
 
+**改变元素值**
 
-
-*清空字典*
-
-用clear()函数清空一个字典。
-
-
-.. code-block:: python
-
-   dict1 = {'name': 'Tom', 'age': 20, 'gender': '男'}
-   
-   dict1.clear()
-   print(dict1)  # {}
-
-
-**改**
-
-写法：``字典序列[key] = 值``
+之前我们已经可以通过键来获取dict的值，那么我们获取到之后就可以直接改变：``字典[key] = 值``
 
 注意：如果key存在则修改这个key对应的值 ；如果key不存在则新增此键值对。
 
-**查**
 
-*key值查找*
+------------
+思考与练习
+------------
 
-.. code-block:: python
+新建一个字典，编写自己的学籍信息，key值可以是：姓名，性别，年龄，等等。
 
-   dict1 = {'name': 'Tom', 'age': 20, 'gender': '男'}
-   print(dict1['name'])  # Tom
-   print(dict1['id'])  # 报错
-
-
-如果当前查找的key存在，则返回对应的值；否则则报错。
-
-
-
-*get()*
-
-- 语法: ``字典序列.get(key, 默认值)``
-
-注意：如果当前查找的key不存在则返回第二个参数(默认值)，如果省略第二个参数，则返回None。
-
-- 快速体验
-
-.. code-block:: python
-
-   dict1 = {'name': 'Tom', 'age': 20, 'gender': '男'}
-   print(dict1.get('name'))  # Tom
-   print(dict1.get('id', 110))  # 110
-   print(dict1.get('id'))  # None
-
-
-*keys()*
-
-.. code-block:: python
-
-   dict1 = {'name': 'Tom', 'age': 20, 'gender': '男'}
-   print(dict1.keys())  # dict_keys(['name', 'age', 'gender'])
-
-
-
-
-*values()*
-
-.. code-block:: python
-
-   dict1 = {'name': 'Tom', 'age': 20, 'gender': '男'}
-   print(dict1.values())  # dict_values(['Tom', 20, '男'])
-
-
-
-
-*items()*
-
-.. code-block:: python
-
-   dict1 = {'name': 'Tom', 'age': 20, 'gender': '男'}
-   print(dict1.items())  # dict_items([('name', 'Tom'), ('age', 20), ('gender', '男')])
-
+------------
+你学到了什么
+------------
 
 
 

@@ -57,21 +57,9 @@
    tuple1 = ('aa', 'bb', 'cc', 'bb')
    print(tuple1[0])  # aa
 
- 
+**获取元素个数**
 
-**count()**
-
-统计某个数据在当前元组出现的次数。
-
-.. code-block:: python
-
-   tuple1 = ('aa', 'bb', 'cc', 'bb')
-   print(tuple1.count('bb'))  # 2
-
-
-**len()**
-
-统计元组中数据的个数。
+统计元组中数据的个数，需要使用len()函数。
 
 .. code-block:: python
 
@@ -90,6 +78,15 @@
 
    TypeError: 'tuple' object does not support item assignment
 
+------------
+思考与练习
+------------
+
+新建一个元组，里面存储自己的所有课程。
+
+------------
+你学到了什么
+------------
 
  
 

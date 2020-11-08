@@ -53,7 +53,7 @@ pygame的图形绘制区域，文字也是需要按照字体和字号，渲染�
    
    screen.fill(WHITE)
    screen.blit(textImage, (10, 100))
-   pygame.display.flip()
+   pygame.display.update()
 
 绘制的效果是：
 

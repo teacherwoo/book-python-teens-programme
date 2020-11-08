@@ -24,7 +24,7 @@
    screen.fill([255, 255, 255])
    img = pygame.image.load("555.jpg")
    screen.blit(img, [50, 50])
-   pygame.display.flip()
+   pygame.display.update()
 
 机器人图片被载入的效果是：
 

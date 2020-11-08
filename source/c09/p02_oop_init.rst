@@ -67,7 +67,14 @@
    print(jack.name,jack.height)  
    print(rose.name,rose.height)          
         
+------------
+思考与练习
+------------
 
+
+------------
+你学到了什么
+------------
 
 
 

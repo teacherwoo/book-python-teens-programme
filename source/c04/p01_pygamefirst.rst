@@ -43,8 +43,11 @@ Pygame已经存在很多时间了，许多优秀的程序员加入其中，把Py
    pygame.init() #模块初始化，任何pygame程序运行前，均需要初始化
    screen = pygame.display.set_mode((300,480)) #定义窗口大小为640*480
 
-
-pygame.init()是启动pygame，并“初始化”它的命令。
+类似于第二章的math模块调用，本章是使用pygame模块进行简单的画图。
+类似于之前引入math模块的方法：``import math`` 。
+我们在这里也需要引入pygame模块：``import pygame`` 。
+下一行的 ``pygame.init()`` 命令，是调用一个pygame程序模块下面的init函数。
+含义是启动pygame，并“初始化”它的命令。实际上，在pygame支持库的下面，有一个init()函数，此函数是对整个pygame环境进行准备。
 screen指的是游戏屏幕。
 
 运行效果是：
@@ -61,6 +64,7 @@ screen指的是游戏屏幕。
 .. note::
 
    关于报错，现在我们很多知识还没有学习，所以暂时用上述的方法关闭pygame程序，到后面的章节会展开详细讲述如何使pygame程序不报错和如何正确关闭pygame程序。
+
 
 ------------
 思考与练习

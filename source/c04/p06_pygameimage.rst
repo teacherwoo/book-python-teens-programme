@@ -31,6 +31,31 @@
 .. image:: ../_static/c04/c04p06_i02_load.png
 
 
+-----------------
+改变图片
+-----------------
+
+您可以使用pygame.transform.scale缩放图像：
+
+.. code-block:: python
+
+   import pygame, sys
+   
+   pygame.init()
+   screen = pygame.display.set_mode([540, 710])
+   screen.fill([255, 255, 255])
+   
+   img = pygame.image.load("555.jpg")
+   img = pygame.transform.scale(img, (140, 280))
+   
+   screen.blit(img, [50, 50])
+   pygame.display.update()
+
+
+
+
+
+
 
 ------------
 思考与练习

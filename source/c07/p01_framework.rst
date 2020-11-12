@@ -2,8 +2,52 @@
 pygame机制
 ===============================
 
-我们如何使得现在的pygame程序不报错呢？
-我们可以在现有的pygame代码上加入下面的一段代码，则pygame窗口就不会报错了：
+回忆一下pygame的使用：
+
+使用pygame的第一步是将pygame库导入到python程序中，以便来使用它
+
+.. code-block:: python
+
+   import pygame
+
+再经过初始化以后我们就可以尽情地使用pygame了。初始化pygame：
+
+.. code-block:: python
+
+   pygame.init()
+
+通常来说我们需要先创建一个窗口，方便我们与程序的交互。下面创建了一个600 x 500的窗口
+
+.. code-block:: python
+
+   screen = pygame.display.set_mode((600,500))
+
+准备打印字体，pygame支持使用pygame.font将文打印到窗口。要打印文本的话首先需要创建一个文字对象
+
+.. code-block:: python
+
+   myfont = pygame.font.Font(None,60)
+
+这个文本绘制进程是一个重量级的进程，比较耗费时间，常用的做法是先在内存中创建文本图像，然后将文本当作一个图像来渲染。
+
+.. code-block:: python
+
+   white = 255,255,255
+   blue = 0,0,200
+   textImage = myfont.render("Hello Pygame", True, white)
+
+textImage 对象可以使用screen.blit()来绘制。上面代码中的render函数第一个参数是文本，第二个参数是抗锯齿字体，第三个参数是一个颜色值（RGB值）。
+
+要绘制本文，通常的过程是清屏，绘制，然后刷新。
+
+.. code-block:: python
+
+   screen.fill(blue)
+   screen.blit(textImage, (100,100))
+   pygame.display.update()
+
+如果此时运行程序的话，会出现一个窗口一闪而过，或者在某些IDE里面，会卡住不动。
+为了让它长时间的显示，我们需要将它放在一个循环中，在现有的pygame代码上加入下面的一段代码，则pygame窗口就不会报错了：
 
 .. code-block:: python
 
@@ -22,27 +66,17 @@ pygame机制
    import pygame
    import sys
    
-   # Colors (R, G, B)
-   BLACK = (0, 0, 0)
-   WHITE = (255, 255, 255)
-   RED = (255, 0, 0)
-   GREEN = (0, 255, 0)
-   BLUE = (0, 0, 255)
-      
-   WIDTH = 360  # 游戏窗口的宽度
-   HEIGHT = 480 # 游戏窗口的高度
-    
    pygame.init()
-   screen = pygame.display.set_mode((WIDTH, HEIGHT))
-   screen.fill(BLACK)
-   pygame.display.set_caption("我的游戏窗口")#设置游戏窗口标题栏文字
+   screen = pygame.display.set_mode((600,500))
+   myfont = pygame.font.Font(None,60)
    
-   #定义初始位置
-   pos_x= 130
-   pos_y= 100
-   shape= pos_x, pos_y, 100, 100
-   width= 2
-   pygame.draw.rect(screen, BLUE, shape, width)
+   white = 255,255,255
+   blue = 0,0,200
+   
+   textImage = myfont.render("Hello Pygame", True, white)
+   
+   screen.fill(blue)
+   screen.blit(textImage, (100,100))
    pygame.display.update()
    
    while True:
@@ -50,9 +84,10 @@ pygame机制
           if event.type == pygame.QUIT:
               sys.exit()
 
-
-
-这就是一个死循环。可以解决我们的问题，那么这是为什么呢？让我们来一起看一下pygame的基本的框架。
+while部分是一个死循环，循环监听pygame运行后得到的系统事件。这样做就可以解决我们的问题，窗口不会一闪而过或者报错。
+所谓事件，就是鼠标活在键盘被敲击，就是用户发出的一些命令。
+那么我们加入了一个循环旧可以解决问题，这是为什么呢？
+让我们来一起看一下pygame的基本的框架。
 
 -------------------------
 Pygame游戏结构框架
@@ -78,106 +113,104 @@ Pygame游戏循环，主要处理3件事情：
 - 3.渲染
    此步骤中，在屏幕上重新绘制所有更新位置后的所有游戏对象。
 
-
 -------------------------
-Pygame游戏结构框架
+处理外部输入
 -------------------------
-所以现在，制作一个简单的pygame程序框架，需要把绘制逻辑部分：``pygame.draw.rect(screen, BLUE, shape, width)`` 
-放到了while循环体立面，动态的绘制,再动态的更新当前的屏幕： ``pygame.display.update()``
+ 
+获取键盘的输入，以便我们可以开放游戏的控制，
 
-所以，上述代码就变为：
+利用如下程序，可以监听获取游戏窗口运行时按下的按键，并打印到屏幕上：
+
+.. code-block:: python
+
+   import pygame
+   import sys 
+    
+   pygame.init()
+   
+   win = pygame.display.set_mode((640,480),0,32)
+   while True:
+       for event in pygame.event.get():
+           if event.type==pygame.QUIT:
+               sys.exit()        
+           if event.type==pygame.KEYDOWN:
+               key = event.key
+               print(key)
+               print(pygame.key.name(key))
+            
+在此程序运行的时候，可以试着按动键盘按键，看一下程序控制台的输出。
+控制台会输出这两个消息，包含 key 属性，是一个整数的 id，代表键盘上具体的某个按键，pygame.key.name(key)是获取编号的按键名称，就是这个按键的字符串描述。
+
+key属性的值是一个数字，为了方便使用，Pygame 将这些数字定义为以下这些常量：
+
+- 数字被定义为K_0、K_1、K_2、K_3、K_4、K_5、K_6、K_7、K_8、K_9，分别代表了键盘上的数字按键。
+- 从K_a、K_b、K_c一直到K_x、K_y、K_z，分别代表了26个字母按键。
+- K_UP、K_DOWN、K_LEFT、K_RIGHT分别代表上下左右的方向按键。
+
+那么如果我们像要开发一个游戏，让一个角色在一个范围内移动，那么我们首先需要能够让pygame程序感知我们的方向按键。
+所以我们先写一个程序去感知方向按键。通过这些常量来抓取：
 
 .. code-block:: python
 
    import pygame
    import sys
    
-   # Colors (R, G, B)
-   BLACK = (0, 0, 0)
-   WHITE = (255, 255, 255)
-   RED = (255, 0, 0)
-   GREEN = (0, 255, 0)
-   BLUE = (0, 0, 255)
-      
-   WIDTH = 360  # 游戏窗口的宽度
-   HEIGHT = 480 # 游戏窗口的高度
-    
    pygame.init()
-   screen = pygame.display.set_mode((WIDTH, HEIGHT))
-   screen.fill(WHITE)
-   pygame.display.set_caption("我的游戏窗口")#设置游戏窗口标题栏文字
+   win = pygame.display.set_mode((640, 480), 0, 32)
+   while True:
+       for event in pygame.event.get():
+           if event.type == pygame.QUIT:
+               sys.exit()
+           if event.type == pygame.KEYDOWN:
+               key = event.key
+               if key == pygame.K_UP:
+                   print('向上走')
+               if key == pygame.K_DOWN:
+                   print('向下走')
+               if key == pygame.K_LEFT:
+                   print('向左走')
+               if key == pygame.K_RIGHT:
+                   print('向右走')
+            
+当键盘按键被按下和释放时，事件队列将获得 pygame.KEYDOWN事件消息，再根据按下的键盘打印出相关信息。
+
+-------------------------
+让角色移动起来
+-------------------------
+
+.. code-block:: python
+
+   import pygame
+   import sys
    
-   #定义初始位置
-   pos_x= 130
-   pos_y= 100
-   width= 2 
+   WHITE = (255, 255, 255)
+   
+   pygame.init()
+   screen = pygame.display.set_mode((480, 680), 0, 32)
+   
+   aircraft = pygame.image.load("aircraft1.jpg")
+   aircraft = pygame.transform.scale(aircraft, (140, 140))
+   
+   pos_x=120
+   pos_y=320
+   step=12
    while True:
        for event in pygame.event.get():
            if event.type == pygame.QUIT:
                sys.exit()
-       shape= pos_x, pos_y, 100, 100
-       pygame.draw.rect(screen, BLUE, shape, width)
+           if event.type == pygame.KEYDOWN:
+               key = event.key
+               if key == pygame.K_LEFT:
+                   pos_x=pos_x-step
+               if key == pygame.K_RIGHT:
+                   pos_x=pos_x+step
+               if key == pygame.K_UP:
+                   pos_y=pos_y-step
+               if key == pygame.K_DOWN:
+                   pos_y=pos_y+step
+       screen.fill(WHITE)
+       screen.blit(aircraft, (pos_x, pos_y))
        pygame.display.update()
 
-绘制出的效果是一样的:
 
-.. image:: ../_static/c07/c07p01_i02_rect.png
-
-虽然效果和之前的一样，但是本质却是不一样的，因为绘制逻辑变为每次刷新前动态绘制，并且不停刷新。
-那么我们如何看到刷新的效果呢？
-就让宽度增加1，也就是说，每次刷新，就增加一个像素的宽度：``width=width+1``
-那么，while循环部分的代码变为
-
-.. code-block:: python
-
-   while True:
-       for event in pygame.event.get():
-           if event.type == pygame.QUIT:
-               sys.exit()       
-         
-       width= width+1       
-       shape= pos_x, pos_y, 100, 100       
-       pygame.draw.rect(screen, BLUE, shape, width)       
-       pygame.display.update()
-
-这样一来，矩形的边变得越来越宽，这样，一个矩形就变成了一个十字架：
-
-.. image:: ../_static/c07/c07p01_i03_cross.png
-
--------------------------
-控制时间
--------------------------
-
-上述的程序运行过程是动态的，但是比较快速，那么我们想延缓这种过称怎么办呢？
-我们开始控制时间。
-上述的程序运行较快，我们就让他慢下来，具体的，采用 ``pygame.time.delay()``
-函数，来使得程序可以暂停一段时间，入参是暂停的毫秒数。
-Pygame中的时间以毫秒（1/1000秒）表示。大多数平台的时间分辨率有限，大约为10毫秒。所以我们控制最好是10毫秒的倍数。
-具体的：
-
-.. code-block:: python
-
-   while True:
-       for event in pygame.event.get():
-           if event.type == pygame.QUIT:
-               sys.exit()
-       pygame.time.delay(20)        
-       width=width+1
-       shape= pos_x, pos_y, 100, 100
-       pygame.draw.rect(screen, BLUE, shape, width)
-       pygame.display.update()
-
-上述程序中的 ``pygame.time.delay(20)`` 就是让成型等待20个毫秒。
-这时，我们就可以看到图形的演化过程了:
-
-.. image:: ../_static/c07/c07p01_i04_animate.png
-
-
-
-
-
-
-
-
-
-
+》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》

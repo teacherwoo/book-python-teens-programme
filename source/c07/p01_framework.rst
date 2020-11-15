@@ -98,11 +98,13 @@ pygame的最小的游戏骨架类似下述图片所描述的：
 .. image:: ../_static/c07/c07p01_i01_pygameframe.png
 
 每个游戏的核心都是一个循环，将其称为“游戏循环”。这个循环一直在不断运行，一遍又一遍地完成游戏工作所需的所有事情。
-每次循环显示一次游戏当前画面，称为帧。
+我们所说的游戏循环，就是把图像的视频逻辑，放到while的主循环内部。
+每次进入while的循环体内部，处理一次改变逻辑，循环显示一次游戏当前画面，并调用一次 ``pygame.display.update()`` 。
+更新一次称为一帧。
 
 **游戏主循环**
 
-Pygame游戏循环，主要处理3件事情：
+Pygame游戏主循环的循环体内部，主要处理下列3件事情：
 
 - 1.处理外部输入（鼠标点击或键盘按下事件）
    这意味着游戏在进行的同时，需要响应与处理用户的操作---这些可能是键盘上的键被按下，或鼠标被点击等事件。
@@ -111,7 +113,7 @@ Pygame游戏循环，主要处理3件事情：
    如果飞机对象在空中飞行，收到重力作用，自身的位置需要改变。如果两个对象相互碰撞，则需要爆炸。
 
 - 3.渲染
-   此步骤中，在屏幕上重新绘制所有更新位置后的所有游戏对象。
+   此步骤中，更新绘制，并在屏幕上重新绘制所有更新位置后的所有游戏对象。
 
 -------------------------
 处理外部输入
@@ -175,7 +177,7 @@ key属性的值是一个数字，为了方便使用，Pygame 将这些数字定�
 当键盘按键被按下和释放时，事件队列将获得 pygame.KEYDOWN事件消息，再根据按下的键盘打印出相关信息。
 
 -------------------------
-让角色移动起来
+让飞起移动
 -------------------------
 
 .. code-block:: python
@@ -212,5 +214,111 @@ key属性的值是一个数字，为了方便使用，Pygame 将这些数字定�
        screen.blit(aircraft, (pos_x, pos_y))
        pygame.display.update()
 
+这段程序是加载一个aircraft飞机图片，进入到我们的pygame窗口内，并缩放到一个合适的大小。
+然后用pos_x和pos_y两个变量，来表示飞机的位置，
 
-》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
+.. image:: ../_static/c07/c07p01_i02_aircraft.png
+
+
+--------------------------
+捕获键盘操作的第二种方法
+--------------------------
+
+python中捕获键盘操作一共有两种方法
+
+第一种方法是我们上面介绍的，使用pygame中event方法使用方式如下：使用键盘右键为例
+
+.. code-block:: python
+
+   if event.type = pygame.KEYDOWN:
+      if event.key =pygame.K_RIGHT: 
+          print(‘向右移动')
+
+第二种方法，使用pygame中的key模块
+
+1，使用pygame.key.get_pressed()返回一个包含键盘中所有按键的元组，元组用一个变量接收。如：
+
+.. code-block:: python
+ 
+   keys_pressed = pygame.key.get_pressed()
+
+2.通过键盘常量，判断元组中键盘的值来确认按键是否被按下。  如果被按下按键对应的值为1。如：
+
+.. code-block:: python
+   
+   if keys_pressed[pygame.K_RIGHT]: 
+        print(‘向右移动')
+
+
+
+区别：
+
+第一种方法，由于是用pygame.KEYDOWN事件进行判断，每次按完按键后必须松开按键才能触发，所以必须抬起才能继续下一次操作。灵活性不好。
+
+第二种方法，是程序主动调用pygame.key.get_pressed()，主动去拿按键状态，所以不用抬起就可以触发，可以按住不松开，操作持续进行。灵活性好。
+
+完整例子：
+
+.. code-block:: python
+
+   import pygame
+   import sys 
+    
+   pygame.init()
+   
+   win = pygame.display.set_mode((640,480),0,32)
+   while True:
+       for event in pygame.event.get():
+           if event.type==pygame.QUIT:
+               sys.exit()        
+       keys_pressed = pygame.key.get_pressed()
+       if keys_pressed[pygame.K_RIGHT]:
+           print('向右移动')
+            
+---------------------
+让飞机连续飞行
+---------------------
+
+根据第二种方法，对飞机控制事件进行改造：
+
+.. code-block:: python
+
+   import pygame
+   import sys
+   
+   WHITE = (255, 255, 255)
+   pygame.init()
+   screen = pygame.display.set_mode((480, 680), 0, 32)
+   aircraft = pygame.image.load("aircraft1.jpg")
+   aircraft = pygame.transform.scale(aircraft, (140, 140))
+   pos_x = 120
+   pos_y = 320
+   step = 1
+   while True:
+       for event in pygame.event.get():
+           if event.type == pygame.QUIT:
+               sys.exit()
+       keys_pressed = pygame.key.get_pressed()
+       if keys_pressed[pygame.K_LEFT]:
+           pos_x = pos_x - step
+       if keys_pressed[pygame.K_RIGHT]:
+           pos_x = pos_x + step
+       if keys_pressed[pygame.K_UP]:
+           pos_y = pos_y - step
+       if keys_pressed[pygame.K_DOWN]:
+           pos_y = pos_y + step
+       screen.fill(WHITE)
+       screen.blit(aircraft, (pos_x, pos_y))
+       pygame.display.update()
+
+这样，我们就可以按下按键，看见飞机在不停的连续移动。
+
+------------
+思考与练习
+------------
+
+把一个飞行变成两个飞机飞行，控制变成两人，由wasd方式和方向键方式进行控制。
+
+------------
+你学到了什么
+------------

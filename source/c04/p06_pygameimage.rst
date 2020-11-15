@@ -35,27 +35,49 @@
 改变图片
 -----------------
 
+我们现在手头有飞机的图片,我们可以对图片进行缩放，以得到我们需要的大小
 您可以使用pygame.transform.scale缩放图像：
 
 .. code-block:: python
 
-   import pygame, sys
+   import pygame 
    
    pygame.init()
    screen = pygame.display.set_mode([540, 710])
    screen.fill([255, 255, 255])
    
-   img = pygame.image.load("555.jpg")
-   img = pygame.transform.scale(img, (140, 280))
+   img = pygame.image.load("aircraft2.jpg")
+   img2 = pygame.transform.scale(img, (140, 140))
    
-   screen.blit(img, [50, 50])
+   screen.blit(img, [20, 10])
+   screen.blit(img2, [50, 520])
    pygame.display.update()
 
+可见，飞机的图片被缩小了:
 
+.. image:: ../_static/c04/c04p06_i04_scale.png
 
+您可以使用pygame.transform.rotate缩放图像：
 
+.. code-block:: python
 
+   import pygame
+   
+   WHITE = (255, 255, 255)
+   pygame.init()
+   screen = pygame.display.set_mode((480, 680), 0, 32)
+   aircraft = pygame.image.load("aircraft2.jpg")
+   aircraft = pygame.transform.scale(aircraft, (140, 140))
+   aircraft = pygame.transform.rotate(aircraft, 180)
+   pos_x = 140
+   pos_y = 120
+   screen.fill(WHITE)
+   screen.blit(aircraft, (pos_x, pos_y))
+   pygame.display.update()
 
+可见，飞机的图片被旋转了180度:
+
+.. image:: ../_static/c04/c04p06_i05_rotate.png
 
 ------------
 思考与练习

@@ -130,7 +130,7 @@
 
 
 --------------------------
-类对象调用函数实现功能
+对象调用函数实现功能
 --------------------------
 
 那么我们就可以利用类内的函数，规定这个类的对象具备那些功能，就是说，这个类的对象被创造出来的时候，带有哪些函数。
@@ -153,13 +153,23 @@
       def eat_leaves_from_trees(self):
          print('吃树上的叶子')
 
-此时，我们创建2个长颈鹿对象：jack和rose，这时，这两个对象都隶属于Giraffes类，而Giraffes类继承了Mammals类，Mammals类继承了Animals类。
+
+我们可以调用类的对象。利用点运算符``.`` 和函数名字来调用函数。在这里可以看出，我们用类创建了一个对象，旧可以通过这个对象来调用类里面事先定义好的函数。
+
+针对继承的情况，子类也可以直接调用父类里面的函数。我在高级的类里面，一次编写了若干的函数，那么他的子类可以直接调用。如图所示：
+
+.. image:: ../_static/c09/c09p01_i04_funcsupercall.png
+
+所以此时，我们创建2个长颈鹿对象：jack和rose，这时，这两个对象都隶属于Giraffes类，而Giraffes类继承了Mammals类，Mammals类继承了Animals类。
 也就是说，任意一只长颈鹿，都是属于长颈鹿类的，而长颈鹿类属于哺乳动物类，而哺乳动物类属于动物类。
 
 .. code-block:: python
 
+   mammal=Mammals()
    jack = Giraffes()
    rose = Giraffes()
+   
+   mammal.eat_food()
    
    jack.move()
    jack.eat_leaves_from_trees()
@@ -167,10 +177,40 @@
    rose.move()
    rose.eat_leaves_from_trees()
 
-我们可以调用类的对象。利用点运算符``.`` 和函数名字来调用函数。在这里可以看出，我们用类创建了一个对象，旧可以通过这个对象来调用类里面事先定义好的函数。
-子类也可以直接调用父类里面的函数。我在高级的类里面，一次编写了若干的函数，那么他的子类可以直接调用。
+-------------------------
+对象内部函数调用其他内部函数
+-------------------------
 
+通常，我们发现编写函数时，各个函数分段负责自己的逻辑过程，最后，由更高级的函数把各个函数组合起来，那么我们可以这样：
 
+.. code-block:: python
+
+   class Animals():
+       def breathe(self):
+           print('呼吸')
+       def move(self):
+           print('移动')
+       def eat_food(self):
+           print('吃食物')
+        
+   class Mammals(Animals):
+       pass
+     
+   class Giraffes(Mammals):
+       def find_food(self):
+           self.move()
+           print('找食物')        
+           
+       def eat_leaves_from_trees(self):
+           self.find_food()
+           print('找到树上的叶子')
+           self.eat_food()
+   
+   jack = Giraffes()
+   #jack.find_food()
+   jack.eat_leaves_from_trees()
+
+在函数内调用其他函数，就是直接调用即可，但是在类内调用类内的其他函数，需要用self来调用。
 
 ------------
 思考与练习

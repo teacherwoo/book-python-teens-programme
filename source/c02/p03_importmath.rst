@@ -21,14 +21,10 @@ Python 模块(Module)，也叫支持包，是一个 Python 文件，以 .py 结�
 math包是python的数学包，一些数学函数常用程序，包含在这个包内。
 下面我们就利用math包，来说明如何引入包和使用包。
 
-导入模块的方式：
+现阶段应该了解的导入模块的方式：
 
    - import 模块名
    - from 模块名 import 功能名
-   - from 模块名 import *
-   - import 模块名 as 别名
-   - from 模块名 import 功能名 as 别名
-
 
 
 **方式一：import方式**
@@ -55,66 +51,61 @@ math包是python的数学包，一些数学函数常用程序，包含在这个�
 
 **方式二：from..import..方式**
 
-语法： 
+常用的写法是： 
 
 .. code-block:: python
 
    from 模块名 import 功能1, 功能2, 功能3... 
 
-体验
+体验from的方式：
 
 .. code-block:: python
 
    >>> from math import fabs
    >>> print(fabs(-100))
    100.0
+   
+.. note::
+ 
+   这部分的详细讲解，会在第八章第二小节进行展开讲解。
 
-**方式三：from .. import * 方式**
+---------------------
+math包的使用
+---------------------
 
-语法： 
-
-.. code-block:: python
-
-   from 模块名 import *
-
-此处的星号，代表任意名称。
-
-体验
+sqrt()求平方根：
 
 .. code-block:: python
 
-   from math import *
-   print(fabs(-100))
+   >>> math.sqrt(100)
+   10.0
+
+
+在python中，math.pi就是我们数学上的π
+
+把x从弧度转换成角度
+
+.. code-block:: python
+
+   >>> math.degrees(math.pi/4)
+   45.0
+
+求x的余弦，x必须是弧度：
+
+.. code-block:: python
+
+   >>> math.cos(math.pi/4)
+   0.7071067811865476
+
+log(x,a) a参数给定时，将 x 以a为底的对数返回。如果不指定a，则默认以e为基数。
+
+>>> math.log(32,2)
+5.0
+>>> math.log(math.e)
+1.0
+
  
 
-**方式四：用 as 定义别名的方式**
-
-语法
-
-.. code-block:: python
-
-   # 模块定义别名
-   import 模块名 as 别名
-   
-   # 功能定义别名
-   from 模块名 import 功能 as 别名
-
-
-体验：
-
-.. code-block:: python
-
-   >>> import math as m
-   >>> print(m.fabs(-100))
-   100.0
-   
-   >>> from math import fabs as abs
-   >>> print(abs(-100))
-   100.0
-
-.. note::
-
-   关于python模块的创建，在本教材的第八章，会展开进行详细讲解。 
 
 ------------
 思考与练习

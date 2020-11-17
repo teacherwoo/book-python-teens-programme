@@ -96,13 +96,22 @@ sqrt()求平方根：
 
    >>> math.cos(math.pi/4)
    0.7071067811865476
+   
+tan()返回x(x为弧度)的正切值
+
+.. code-block:: python
+
+   >>> math.tan(math.pi/4)
+   0.9999999999999999
 
 log(x,a) a参数给定时，将 x 以a为底的对数返回。如果不指定a，则默认以e为基数。
 
->>> math.log(32,2)
-5.0
->>> math.log(math.e)
-1.0
+.. code-block:: python
+
+   >>> math.log(32,2)
+   5.0
+   >>> math.log(math.e)
+   1.0
 
  
 

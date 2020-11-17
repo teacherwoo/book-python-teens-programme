@@ -1,75 +1,21 @@
 =================================================
-python中模块、函数与各个模块之间的调用
+在不同文件夹下调用资源
 =================================================
 
 
-------------------------
-同一文件夹下的调用
-------------------------
 
-同一文件夹下的调用调用函数，针对一个模块的函数调用
+如果是在同一文件夹下的调用调用函数，针对一个模块的函数或者类进行调用
 
-第一种： import 模块名
-模块名.函数名
-
-第二种： from 模块名 import 函数名 （as 别名）
-python调用另一个.py文件中的类和函数
-
-
-A.py文件如下：
-
-.. code-block:: python
-
-   def add(x,y):
-      print('和为：%d'%(x+y))
-
-在B.py文件中调用A.py的add函数如下：
-
-.. code-block:: python
-
-   import A
-   A.add(1,2)
-
-或
-
-.. code-block:: python
-
-   from A import add
-   add(1,2)
-
-同一文件夹下的调用调用类
-
-A.py文件如下:
-
-.. code-block:: python
-
-   class A:
-       def __init__(self,xx,yy):
-           self.x=xx
-           self.y=yy
-       def add(self):
-           print("x和y的和为：%d"%(self.x+self.y))
-
-在B.py文件中调用A.py的add函数如下：
-
-.. code-block:: python
-
-   from A import A
-   a=A(2,3)
-   a.add()
-
-或 
-
-.. code-block:: python
-
-   import A
-   a=A.A(2,3)
-   a.add()
+第一种引入： import 模块名
+第二种引入： from 模块名 import 函数名 或者 from 模块名 import 类名
+使用时是：模块名.函数名 或者 模块名.类名
+ 
 
 ----------------------
 在不同文件夹下调用
 ----------------------
 
+python调用另一个.py文件中的类和函数，并且python找不到的时候，大多是因为py文件没有在系统环境变量的路径列表内。
 我们详细了解一下Python的 ``sys.path`` 的使用。sys.path是python的搜索模块的路径集，是一个list，
 可以在python 环境下使用：``sys.path.append(‘你的模块的名称’)`` 或者  ``sys.path.insert(0,’模块的名称’)``
 添加相关的路径，但在退出python环境后自己添加的路径就会自动消失。

@@ -23,14 +23,16 @@
 一对引号字创建的符串：
 
 .. code-block:: python
-
+   :linenos:
+   
    name1 = 'Jack'
    name2 = "Rose"
 
 用三个引号创建字符串，引号的类型前后需要一致。一般是用来记录多行字符串构成的一段文字，请看下面的字符串：
 
 .. code-block:: python
-
+   :linenos:
+   
    name3 = '''Jack'''
    name4 = """Rose"""
    a = ''' i am Jack, 
@@ -42,7 +44,8 @@
 思考：如果创建一个字符串 ``I'm Tom`` ?
 
 .. code-block:: python
-
+   :linenos:
+   
    c = "I'm Tom"
    d = 'I\'m Tom'
 

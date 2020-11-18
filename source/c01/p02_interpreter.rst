@@ -2,10 +2,50 @@
 Python的解释器安装与使用
 ========================
 
+计算机程序是一组让计算机执行某种动作的命令。
+和那些可以触碰的计算机硬件不同，是运行在计算机硬件上的逻辑指令集合。
+程序的集合通常被称为软件。电脑游戏，手机app软件，都是软件。
+
+和人类一样，计算机也可以使用多种语言。这里所说的语言，就是计算机编程语言。
+简单的说，一种编程语言，就是一种人类与计算机进行交流的方式，这种方式可以使人和计算机都能理解。
+计算机编程的历史上，有过很多的编程语言。
+
+.. image:: ../_static/c01/c01p02_i01_languages.png
+
+-------------------------------------------
+什么是python语言，为什么学习python语言
+-------------------------------------------
+
+本书主要学习python技术，python语言特别适合初学者，并且功能强大，且应用场景很多。   
+Python是时下最最火爆的编程语言之一，已经非常的流行并将会越来越流行，具体原因如下：
+
+- 简单、易学，适应人群广泛
+- 免费、开源
+- 应用领域广泛
+
+以下就是python应用的主要领域：
+
+- WEB开发
+- 桌面软件
+- 网络编程
+- 爬虫开发
+- 云计算开发
+- 人工智能
+- 自动化运维
+- 金融分析
+- 科学运算
+   
+以下知名框架均是Python语言开发：
+   
+- 云计算框架：OpenStack
+- AI机器学习框架：Scikit-learn
+- Google开源人工智能深度学习框架：TensorFlow （阿尔法狗）
+   
+编者的经验，现在有很多的大项目，银行，保险，跨国科研等项目上，有很多的开发语言是python。
+
 我们将要学习的是python，python语言是解释型语言，需要使用专门的解释器对源程序逐行解释成特定平台的机器码并立即执行。
 
 python程序，需要运行在特定平台上，平台带有相应的解释器，就可以运行python源代码。所以首先我们需要准备好python的解释器。
-
 
 -----------------------------
 下载Python解释器
@@ -13,7 +53,7 @@ python程序，需要运行在特定平台上，平台带有相应的解释器�
 
 打开解释器的  `[python解释器3.81——https://www.python.org/downloads/release/python-381/] <https://www.python.org/downloads/release/python-381/>`_ 页面。
 
-.. image:: ../_static/c01/c01p02_i01_pythondownload.png
+.. image:: ../_static/c01/c01p02_i02_pythondownload.png
 
 查找我们需要的python解释器3.8安装版：Windows x86-64 executable installer 单击即可下载。
 
@@ -23,11 +63,11 @@ python程序，需要运行在特定平台上，平台带有相应的解释器�
 
 双击可执行文件，并勾选添加环境变量，按照客户设置进行安装  ：
 
-.. image:: ../_static/c01/c01p02_i02_installpython.png
+.. image:: ../_static/c01/c01p02_i03_installpython.png
 
 下一步，检查默认附加选项是否都被勾选上，按提示操作即可：
 
-.. image:: ../_static/c01/c01p02_i03_installpython2.png
+.. image:: ../_static/c01/c01p02_i04_installpython2.png
 
 -------------------------
 检查解释器安装是否成功
@@ -38,7 +78,7 @@ python程序，需要运行在特定平台上，平台带有相应的解释器�
 
 在Python交互式解释器中输 入 ``import this`` ,就会显示Python之禅：
 
-.. image:: ../_static/c01/c01p02_i04_zen.png
+.. image:: ../_static/c01/c01p02_i05_zen.png
 
 看到上述现象，说明python解释器安装成功。
 
@@ -114,4 +154,6 @@ python程序，需要运行在特定平台上，平台带有相应的解释器�
 你学到了什么
 ------------
 
-.. image:: ../_static/c01/c01p02_i05_end.jpg
+什么是程序，以及Python特点。
+
+.. image:: ../_static/c01/c01p02_i06_end.jpg

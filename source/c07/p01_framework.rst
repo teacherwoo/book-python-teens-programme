@@ -232,7 +232,7 @@ python中捕获键盘操作一共有两种方法
 
    if event.type = pygame.KEYDOWN:
       if event.key =pygame.K_RIGHT: 
-          print(‘向右移动')
+          print('向右移动')
 
 第二种方法，使用pygame中的key模块
 
@@ -247,7 +247,7 @@ python中捕获键盘操作一共有两种方法
 .. code-block:: python
    
    if keys_pressed[pygame.K_RIGHT]: 
-        print(‘向右移动')
+      print('向右移动')
 
 
 

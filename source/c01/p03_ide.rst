@@ -26,13 +26,17 @@ Python集成开发环境准备
 下载后，双击安装包，按照下述步骤进行安装。
 
 .. image:: ../_static/c01/c01p03_i02_thonnyinstall.png
+   :height: 350 
 
 .. image:: ../_static/c01/c01p03_i03_thonnyinstall2.png
-
+   :height: 350 
+   
 .. image:: ../_static/c01/c01p03_i04_thonnyinstall3.png
-
+   :height: 350 
+   
 .. image:: ../_static/c01/c01p03_i05_thonnyinstall4.png
-
+   :height: 350 
+   
 --------------------------------
 设置Thonny编辑器的语言为中文
 --------------------------------

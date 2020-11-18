@@ -17,7 +17,6 @@ Python集成开发环境准备
 `[Thonny—— https://thonny.org/] <https://thonny.org/>`_
 
 .. image:: ../_static/c01/c01p03_i01_thonnydownload.png
- 
 
 --------
 安装

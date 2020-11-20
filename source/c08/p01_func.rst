@@ -89,6 +89,7 @@ def是define的缩写。
 在函数中，如果需要返回结果给用户需要使用函数返回值。
 
 .. code-block:: python
+   :linenos:
 
    def buy():
        return '可乐'
@@ -101,6 +102,7 @@ def是define的缩写。
 下面我们利用return关键字，制作一个计算器，计算任意两数字之和，并保存结果和返回。
 
 .. code-block:: python
+   :linenos:
 
    def add(a, b):
        return a + b   

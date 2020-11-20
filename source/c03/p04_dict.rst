@@ -32,7 +32,8 @@ python中的字典是dict，是单词dictionary的缩写。
 如下代码示范了使用花括号语法创建字典： 
 
 .. code-block:: python
-        
+   :linenos:
+ 
    scores = {'语文': 89, '数学': 92, '英语': 93}
    print(scores)
    

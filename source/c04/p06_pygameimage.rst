@@ -18,8 +18,7 @@
 .. code-block:: python
    :linenos:
    
-   import pygame, sys
-   
+   import pygame, sys   
    pygame.init()
    screen = pygame.display.set_mode([540, 710])
    screen.fill([255, 255, 255])
@@ -42,8 +41,7 @@
 .. code-block:: python
    :linenos:
    
-   import pygame 
-   
+   import pygame    
    pygame.init()
    screen = pygame.display.set_mode([540, 710])
    screen.fill([255, 255, 255])
@@ -64,8 +62,7 @@
 .. code-block:: python
    :linenos:
    
-   import pygame
-   
+   import pygame   
    WHITE = (255, 255, 255)
    pygame.init()
    screen = pygame.display.set_mode((480, 680), 0, 32)

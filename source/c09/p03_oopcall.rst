@@ -7,6 +7,7 @@
 A.py文件如下:
 
 .. code-block:: python
+   :linenos:
 
    class M:
        def __init__(self,xx,yy):

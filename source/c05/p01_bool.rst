@@ -115,23 +115,6 @@ bool仅包含真(True)/假(False)两个值，0为False，非0为True。在逻辑
    # 结果：True
    print('Lilys' not in name_list)
 
-
-**案例**
-
-需求：查找用户输入的名字是否已经存在。
-
-.. code-block:: python
-
-   name_list = ['Tom', 'Lily', 'Rose']
-   
-   name = input('请输入您要搜索的名字：')
-   
-   if name in name_list:
-       print(f'您输入的名字是{name}, 名字已经存在')
-   else:
-       print(f'您输入的名字是{name}, 名字不存在')
-
-
 ----------------
 bool值的运算
 ----------------
@@ -149,6 +132,7 @@ not           not x                 布尔"非"：如果 x 为 True，返回 Fal
 简单实例：
  
 .. code-block:: python
+   :linenos:
 
    a = 1
    b = 2

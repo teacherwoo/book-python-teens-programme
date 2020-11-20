@@ -151,13 +151,16 @@
 我们看一下例子：
 
 .. code-block:: python
+   :linenos:
 
    mystr = "hello world and itcast and itheima and Python"
    
    # 结果：hello world he itcast he itheima he Python
    print(mystr.replace('and', 'he'))
+   
    # 结果：hello world he itcast he itheima he Python
    print(mystr.replace('and', 'he', 10))
+   
    # 结果：hello world and itcast and itheima and Python
    print(mystr)
  

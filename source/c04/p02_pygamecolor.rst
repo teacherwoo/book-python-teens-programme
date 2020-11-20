@@ -53,9 +53,8 @@
 
 .. code-block:: python
    :linenos:
-   
-   import pygame
-   
+
+   import pygame   
    # Colors (R, G, B)
    BLACK = (0, 0, 0)
    WHITE = (255, 255, 255)

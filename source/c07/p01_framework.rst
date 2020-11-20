@@ -50,6 +50,7 @@ textImage 对象可以使用screen.blit()来绘制。上面代码中的render函
 为了让它长时间的显示，我们需要将它放在一个循环中，在现有的pygame代码上加入下面的一段代码，则pygame窗口就不会报错了：
 
 .. code-block:: python
+   :linenos:
 
    while True:
        for event in pygame.event.get():

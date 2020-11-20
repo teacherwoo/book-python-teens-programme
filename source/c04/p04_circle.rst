@@ -8,8 +8,7 @@ pygame中的圆形绘制方式为是，pygame.draw.circle函数。
 .. code-block:: python
    :linenos:
    
-   import pygame
-   
+   import pygame   
    # Colors (R, G, B)
    BLACK = (0, 0, 0)
    WHITE = (255, 255, 255)

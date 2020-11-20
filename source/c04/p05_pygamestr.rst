@@ -37,8 +37,7 @@ pygame的图形绘制区域，文字也是需要按照字体和字号，渲染�
 .. code-block:: python
    :linenos:
 
-   import pygame
-   
+   import pygame   
    # Colors (R, G, B)
    BLACK = (0, 0, 0)
    WHITE = (255, 255, 255)

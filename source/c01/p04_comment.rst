@@ -61,6 +61,7 @@ Python 中多行注释使用三个单引号 ``'''`` 或三个双引号 ``"""``�
 **单行注释**
 
 .. code-block:: python
+   :linenos:
 
    # 输出hello world
    print('hello world')   
@@ -70,6 +71,7 @@ Python 中多行注释使用三个单引号 ``'''`` 或三个双引号 ``"""``�
 **多行注释**
 
 .. code-block:: python
+   :linenos:
 
    """
        下面三行都是输出的作用，输出内容分别是：

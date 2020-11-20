@@ -27,7 +27,7 @@ B.py中调用A.py文件：
 
 .. code-block:: python
    :linenos:
-   
+
    import sys
    sys.path.append(r'C:\Test')
    import A
@@ -52,6 +52,7 @@ python运行时就会到其中进行寻找，找到了就会拿来执行，找�
 根据上述规则，我们利用os模块（即operation system），查看相对路径所指向的绝对路径是什么：
 
 .. code-block:: python
+   :linenos:
 
    import os
    path1=os.path.abspath('.')   # 表示当前所处的文件夹的绝对路径

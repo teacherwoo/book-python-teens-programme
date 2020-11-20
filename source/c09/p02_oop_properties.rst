@@ -18,7 +18,7 @@
 
 .. code-block:: python
    :linenos:
-   
+
    class Washer():
       def wash(self):
           print('我洗衣服')
@@ -94,6 +94,7 @@ __init__()构造对象初始数据
 如果想要创建对象时就存放好数据，可以定义类的构造函数__init__()。例如：
 
 .. code-block:: python
+   :linenos:
 
    class Person:
        def __init__(self,name,age):

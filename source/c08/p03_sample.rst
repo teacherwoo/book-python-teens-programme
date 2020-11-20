@@ -12,10 +12,10 @@
 1. 求三个数之和
 
 .. code-block:: python
+   :linenos:
 
    def sum(a, b, c):
        return a + b + c
-   
    
    result = sum(1, 2, 3)
    print(result)  # 6

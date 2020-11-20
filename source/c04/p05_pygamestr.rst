@@ -35,6 +35,7 @@ pygame的图形绘制区域，文字也是需要按照字体和字号，渲染�
 所以整体的代码是：
 
 .. code-block:: python
+   :linenos:
 
    import pygame
    

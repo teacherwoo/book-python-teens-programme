@@ -6,7 +6,8 @@ pygame中的圆形绘制方式为是，pygame.draw.circle函数。
 所以首先，把对应的函数代入其中：
 
 .. code-block:: python
-
+   :linenos:
+   
    import pygame
    
    # Colors (R, G, B)

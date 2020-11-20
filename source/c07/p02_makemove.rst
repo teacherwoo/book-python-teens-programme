@@ -15,7 +15,8 @@
 所以，上述代码就变为：
 
 .. code-block:: python
-
+   :linenos:
+   
    import pygame
    import sys
    
@@ -57,7 +58,8 @@
 此时，while循环部分的代码变为
 
 .. code-block:: python
-
+   :linenos:
+   
    while True:
        for event in pygame.event.get():
            if event.type == pygame.QUIT:
@@ -88,7 +90,8 @@ Pygame中的时间以毫秒（1/1000秒）表示。大多数平台的时间分�
 具体的：
 
 .. code-block:: python
-
+   :linenos:
+   
    while True:
        for event in pygame.event.get():
            if event.type == pygame.QUIT:
@@ -113,7 +116,8 @@ Pygame中的时间以毫秒（1/1000秒）表示。大多数平台的时间分�
 这一小节，我们通过改变图形的位置，让图像自己动起来。
 
 .. code-block:: python
-
+   :linenos:
+   
    import pygame
    import sys
    

@@ -26,7 +26,8 @@
 2. 求三个数平均值
 
 .. code-block:: python
-
+   :linenos:
+   
    def average(a, b, c):
        sumResult = sum(a, b, c)
        return sumResult / 3
@@ -53,7 +54,8 @@
 根据表达式的逻辑，进行下述编程：
 
 .. code-block:: python
-
+   :linenos:
+   
    import math
    def quadratic(a,b,c):
       p=b*b-4*a*c

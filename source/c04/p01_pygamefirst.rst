@@ -61,6 +61,8 @@ screen指的是游戏屏幕。
 
 .. image:: ../_static/c04/c04p01_i03_pygameclose.png
 
+现阶段，点击红色按钮对片pygame程序进行关闭。
+
 .. note::
 
    关于报错，现在我们很多知识还没有学习，所以暂时用上述的方法关闭pygame程序，到后面的章节会展开详细讲述如何使pygame程序不报错和如何正确关闭pygame程序。

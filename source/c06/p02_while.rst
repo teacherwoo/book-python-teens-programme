@@ -30,13 +30,12 @@ for循环一般是对一个序列，针对指定长度的数据的循环。而wh
 
    for x in range(1,100):
        print('爬了'+ str(x)+'级台阶')
-  
-    
+
 而如果我们要爬山，山上有无数的楼梯层数，所以，当我们爬的时候如果精疲力尽，我们就会停止，或者在爬的时候突然下雨，我们也需要停止爬山。
 
-
 .. code-block:: python
-
+   :linenos:
+   
    rain=False
    step=0
    stop=False

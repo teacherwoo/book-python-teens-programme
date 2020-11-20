@@ -32,7 +32,8 @@
 我们把树状图里的类：
 
 .. code-block:: python
-
+   :linenos:
+   
    class Things:
       pass
       
@@ -54,7 +55,8 @@
 动物，哺乳动物，长颈鹿，逐一继承：
 
 .. code-block:: python
-
+   :linenos:
+   
    class Animals(Animate):
       pass
       
@@ -99,7 +101,8 @@
 那么Animals类就可以定义为：
 
 .. code-block:: python
-
+   :linenos:
+   
    class Animals(Animate):
       def breath(self):
          pass
@@ -131,7 +134,8 @@
 那么上述代码添加函数功能：
 
 .. code-block:: python
-
+   :linenos:
+   
    class Animals(Animate):
       def breath(self):
          print('呼吸')
@@ -174,7 +178,8 @@
 也就是说，任意一只长颈鹿，都是属于长颈鹿类的，而长颈鹿类属于哺乳动物类，而哺乳动物类属于动物类。
 
 .. code-block:: python
-
+   :linenos:
+   
    class Animals(Animate):
       def breath(self):
          print('呼吸')
@@ -210,7 +215,8 @@
 通常，我们发现编写函数时，各个函数分段负责自己的逻辑过程，最后，由更高级的函数把各个函数组合起来，那么我们可以这样：
 
 .. code-block:: python
-
+   :linenos:
+   
    class Animals():
        def breathe(self):
            print('呼吸')

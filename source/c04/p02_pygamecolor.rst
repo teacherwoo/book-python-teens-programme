@@ -52,7 +52,8 @@
 完整的程序是：
 
 .. code-block:: python
-
+   :linenos:
+   
    import pygame
    
    # Colors (R, G, B)

@@ -17,7 +17,8 @@
 比如下面的例子，程序定义了一个洗衣工类，这个类在实例化的时候，self就被指定为具体的某个洗衣工人。
 
 .. code-block:: python
-
+   :linenos:
+   
    class Washer():
       def wash(self):
           print('我洗衣服')

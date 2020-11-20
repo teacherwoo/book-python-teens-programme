@@ -20,7 +20,8 @@ break关键字的流程图：
 break使用时，大多和if判断语句一起使用，下面的例子打印字母，遇到h停止，打印数字，遇到5则停止：
 
 .. code-block:: python
-
+   :linenos:
+   
    for letter in 'Python':     # 第一个实例
       if letter == 'h':
          break
@@ -66,7 +67,8 @@ continue使用时，大多和if判断语句一起使用。
 下面的例子打印字母，遇到h跳过，打印数字，遇到5也跳过：
 
 .. code-block:: python
-
+   :linenos:
+   
    for letter in 'Python':     # 第一个实例
       if letter == 'h':
          continue

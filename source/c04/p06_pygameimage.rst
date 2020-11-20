@@ -16,7 +16,8 @@
 载入的代码是：
 
 .. code-block:: python
-
+   :linenos:
+   
    import pygame, sys
    
    pygame.init()
@@ -39,7 +40,8 @@
 您可以使用pygame.transform.scale缩放图像：
 
 .. code-block:: python
-
+   :linenos:
+   
    import pygame 
    
    pygame.init()
@@ -60,7 +62,8 @@
 您可以使用pygame.transform.rotate缩放图像：
 
 .. code-block:: python
-
+   :linenos:
+   
    import pygame
    
    WHITE = (255, 255, 255)

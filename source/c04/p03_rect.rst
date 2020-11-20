@@ -8,7 +8,8 @@ pygame中的矩形绘制方式为是，pygame.draw.rect函数。
 所以首先我们把对应的函数代入其中：
 
 .. code-block:: python
-
+   :linenos:
+   
    import pygame
    
    # Colors (R, G, B)
@@ -53,7 +54,8 @@ pygame中的矩形绘制方式为是，pygame.draw.rect函数。
 只要把绘制图形的width设置为零，则绘制过程就会实现颜色填充。下面，我们在原有矩形的下面，绘制一个用红色填充的图形：
 
 .. code-block:: python
-
+   :linenos:
+   
    import pygame
    
    # Colors (R, G, B)

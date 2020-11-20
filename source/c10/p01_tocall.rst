@@ -26,7 +26,8 @@ python在import模块时， 是在 ``sys.path`` 里按顺序查找的。
 B.py中调用A.py文件：
 
 .. code-block:: python
-
+   :linenos:
+   
    import sys
    sys.path.append(r'C:\Test')
    import A

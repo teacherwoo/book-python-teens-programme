@@ -33,7 +33,7 @@
 
 .. code-block:: python
    :linenos:
-   
+
    class Things:
       pass
       
@@ -56,7 +56,7 @@
 
 .. code-block:: python
    :linenos:
-   
+
    class Animals(Animate):
       pass
       
@@ -102,7 +102,7 @@
 
 .. code-block:: python
    :linenos:
-   
+
    class Animals(Animate):
       def breath(self):
          pass
@@ -135,7 +135,7 @@
 
 .. code-block:: python
    :linenos:
-   
+
    class Animals(Animate):
       def breath(self):
          print('呼吸')
@@ -179,7 +179,7 @@
 
 .. code-block:: python
    :linenos:
-   
+
    class Animals(Animate):
       def breath(self):
          print('呼吸')

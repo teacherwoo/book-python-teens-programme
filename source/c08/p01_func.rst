@@ -45,6 +45,7 @@ def是define的缩写。
 比如我们需要编写一个函数，完成1和2两个数的加法运算，如何书写程序？
 
 .. code-block:: python
+   :linenos:
 
    # 定义函数
    def add():
@@ -61,6 +62,7 @@ def是define的缩写。
 在函数被调用的时候接收的数字就是函数的“入参”。
 
 .. code-block:: python
+   :linenos:
 
    def add(a, b):
        result = a + b

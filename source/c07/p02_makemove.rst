@@ -16,7 +16,7 @@
 
 .. code-block:: python
    :linenos:
-   
+
    import pygame
    import sys
    
@@ -59,7 +59,7 @@
 
 .. code-block:: python
    :linenos:
-   
+
    while True:
        for event in pygame.event.get():
            if event.type == pygame.QUIT:
@@ -91,7 +91,7 @@ Pygame中的时间以毫秒（1/1000秒）表示。大多数平台的时间分�
 
 .. code-block:: python
    :linenos:
-   
+
    while True:
        for event in pygame.event.get():
            if event.type == pygame.QUIT:
@@ -117,7 +117,7 @@ Pygame中的时间以毫秒（1/1000秒）表示。大多数平台的时间分�
 
 .. code-block:: python
    :linenos:
-   
+
    import pygame
    import sys
    

@@ -63,7 +63,7 @@ textImage 对象可以使用screen.blit()来绘制。上面代码中的render函
 
 .. code-block:: python
    :linenos:
-   
+
    import pygame
    import sys
    
@@ -126,7 +126,7 @@ Pygame游戏主循环的循环体内部，主要处理下列3件事情：
 
 .. code-block:: python
    :linenos:
-   
+
    import pygame
    import sys 
     
@@ -156,7 +156,7 @@ key属性的值是一个数字，为了方便使用，Pygame 将这些数字定�
 
 .. code-block:: python
    :linenos:
-   
+
    import pygame
    import sys
    
@@ -185,7 +185,7 @@ key属性的值是一个数字，为了方便使用，Pygame 将这些数字定�
 
 .. code-block:: python
    :linenos:
-   
+
    import pygame
    import sys
    
@@ -265,7 +265,7 @@ python中捕获键盘操作一共有两种方法
 
 .. code-block:: python
    :linenos:
-   
+
    import pygame
    import sys 
     
@@ -288,7 +288,7 @@ python中捕获键盘操作一共有两种方法
 
 .. code-block:: python
    :linenos:
-   
+
    import pygame
    import sys
    

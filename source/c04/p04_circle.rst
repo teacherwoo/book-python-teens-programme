@@ -55,15 +55,3 @@ pygame中的圆形绘制方式为是，pygame.draw.circle函数。
 - 运行基本的pygame程序
 
  
-
-
-
-
-
-
-
-
-
-
-
-

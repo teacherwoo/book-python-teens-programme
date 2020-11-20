@@ -2,9 +2,9 @@
 面向对象编程
 =============================
 
-本章介绍Python语言的异常处理。
- 
 .. image:: ../_static/book/step_light.png
+
+本章介绍Python语言的面向对象编程方式。
 
 .. toctree::
    :maxdepth: 1

@@ -2,10 +2,9 @@
 用函数和模块重用你的代码
 =============================
 
-本章介绍python的模块和包的用法。
-
-
 .. image:: ../_static/book/step_light.png
+
+本章介绍python的函数模块的用法。
 
 .. toctree::
    :maxdepth: 1

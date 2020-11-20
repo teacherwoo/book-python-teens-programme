@@ -2,9 +2,9 @@
 用pygame包画图
 ===================
 
-本章开始学习用pygame包，来进行简单的画图操作。
-
 .. image:: ../_static/book/step_light.png
+
+本章开始学习用pygame包，来进行简单的画图操作。
 
 .. toctree::
    :maxdepth: 1

@@ -2,8 +2,9 @@
 开发游戏
 =============================
 
- 
 .. image:: ../_static/book/step_light.png
+
+本章是对之前学过的编程知识的一个综合应用，通过开发几款游戏，来熟练掌握python的基本编程知识。
 
 .. toctree::
    :maxdepth: 1

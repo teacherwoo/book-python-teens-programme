@@ -2,10 +2,10 @@
 使用if和else来提问
 =============================
  
+.. image:: ../_static/book/step_light.png
+
 在编写程序的时候，经常会用到“是”或者“否”的情况。
 这类问题叫做条件问题。
-
-.. image:: ../_static/book/step_light.png
 
 .. toctree::
    :maxdepth: 1

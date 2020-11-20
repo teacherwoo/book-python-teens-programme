@@ -2,10 +2,10 @@
 让画面动起来
 =============================
 
-本章介绍pygame的正常编程过程。
- 
 .. image:: ../_static/book/step_light.png
 
+之前的章节，我们利用pygame，快速展示我们编程的实际效果，那么本章开始完整深入介绍pygame的编程过程。
+ 
 .. toctree::
    :maxdepth: 1
    :glob:
